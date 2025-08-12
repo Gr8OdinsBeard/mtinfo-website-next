@@ -1,13 +1,29 @@
+import { HeroSection, LayoutContainer, Section } from "@/components";
+
 export default function Home() {
   return (
-    <div className='font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20'>
-      <h1 className='text-4xl font-bold'>matthewtopping.info</h1>
-      <p className='text-lg text-center'>
-        This is a sample application built with Next.js and Tailwind CSS.
-      </p>
-      <footer className='text-sm text-gray-500'>
-        © matthewtopping.info. All rights reserved.
-      </footer>
+    <div className="min-h-screen">
+      <Section as="header" spacing="sm" aria-label="Homepage hero">
+        <LayoutContainer maxWidth="lg">
+          <HeroSection name="matthewtopping.info" title="portfolio page" />
+        </LayoutContainer>
+      </Section>
+
+      <Section as="main" spacing="lg" aria-label="Homepage content">
+        <LayoutContainer maxWidth="lg">
+          <p className="text-lg text-center">
+            This is a sample application built with Next.js and Tailwind CSS.
+          </p>
+        </LayoutContainer>
+      </Section>
+
+      <Section as="footer" spacing="sm">
+        <LayoutContainer>
+          <p className="text-sm text-gray-500 text-center">
+            © matthewtopping.info. All rights reserved.
+          </p>
+        </LayoutContainer>
+      </Section>
     </div>
   );
 }
